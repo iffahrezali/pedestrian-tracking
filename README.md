@@ -10,9 +10,22 @@ The pedestrian tracking algorithm based on simulation and optimization by using 
 ![00081](https://user-images.githubusercontent.com/92578072/140053031-8076216c-06aa-4d2c-bb79-ff1724505be7.jpg)
 ![00095](https://user-images.githubusercontent.com/92578072/140053037-2bc1ea6d-140d-4807-b682-8c7d08eebd20.jpg)
 
+## Confusion Matrix of the Method
+| Methods | Haar-like features | HOG | Combination of method |
+| --------------|------------|-------------|---------|
+| True positive (TP) | 26 | 22 | 120 |
+| False positive (FP) | 73| 73 | 289 |
+| False negative (FN)| 153 | 157| 59 |
+| Total pedestrians | 179 | 179 | 179|
+
 ## Reliability
-|---| Haar-like features | HOG | Combination of method |
-| --------------|------------|-------------|
+| Methods| Haar-like features | HOG | Combination of method |
+| --------------|------------|-------------|---------|
 | Precision (%) | 26.26 | 14.53 | 10.32 |
 | Recall (%) | 23.16 | 12.29 | 8.73 |
 | Quality (%)| 29.34 | 67.04 | 25.64 |
+
+## F-1 Score
+| Methods| Haar-like features | HOG | Combination of method |
+| --------------|------------|-------------|---------|
+| F-1 score (%) | 18.71 | 16.06 | 40.82 |
