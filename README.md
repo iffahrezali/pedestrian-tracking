@@ -2,7 +2,7 @@
 Apart from existing applications of computer vision including robotics, surveillance and automotive safety, pedestrian detection remains one of the major challenges in the field. It is formulated as the problem of automatically identifying and locating the pedestrians in images or videos. In the past, many techniques have been proposed to solve this problem accurately and efficiently. However, the variations in images such as body attire and pose, occlusion, different illumination parameters in different scenarios and clutter present in the background poses challenges in attaining high accuracy. An increasing number of challenging public datasets has driven much of the progress of pedestrian tracking few years back. To continue the rapid rate of innovation, this project aims to improve the overall performance of the existing methods by combining the Histogram of Oriented Gradients (HOG) and Haar-like features with particle filtering. 
 
 # Disclaimer
-This project is my Final Year Project (FYP) in fulfillment of Electrical and Electronics Engineering at Universti Malaysia Sarawak (UNIMAS). In this project, the particle filtering is omitted due to time and computational limitations.
+This project is my Final Year Project (FYP) in fulfillment of Electrical and Electronics Engineering at Universti Malaysia Sarawak (UNIMAS). In this project, the particle filtering is omitted due to time and computational limitations. Hence, only HOG and Haar-like features are used in results analysis.
 
 # General Framework of Pedestrian Tracking
 ![Proposed Method Flowchart](https://user-images.githubusercontent.com/92578072/140056962-e73a1744-470e-4d8b-a0e4-1879cc4e7ff5.png)
@@ -24,6 +24,8 @@ To evaluate the pedestrian tracking results, numerical accuracy assessment is ex
 | False negative (FN)| 153 | 157| 59 |
 | Total pedestrians | 179 | 179 | 179|
 
+The results obtained indicate that when using a combination of Haar-like features and HOG method, the number of correct detections is increased. Although the proposed method has the most pedestrians correctly detected, the number of false positives or incorrect pedestrian detections is the highest, with a difference of 216. It suggests that the proposed approach detecting irrelevant items. In comparison to Haar-like features and HOG method, the proposed approach has the least number of 94 and 98 undetected pedestrians respectively, out of 179 total pedestrians in the video. Even under most favourable conditions, the proposed method is far from perfect. However, high false positive is not necessarily bad. Some extra false positives or false alarms are better than saving some false negative. In other words, for precaution measures, it is better to get non-pedestrians labelled as pedestrians over leaving pedestrians labelled as non-pedestrians.
+
 ### Reliability
 | Methods| Haar-like features | HOG | Combination of method |
 | --------------|------------|-------------|---------|
@@ -31,9 +33,14 @@ To evaluate the pedestrian tracking results, numerical accuracy assessment is ex
 | Recall (%) | 23.16 | 12.29 | 8.73 |
 | Quality (%)| 29.34 | 67.04 | 25.64 |
 
+The proposed pedestrian tracking also shows a good performance, with more 52.51% and 54.75% recall compared to other methods. The proposed method hits the best overall quality in pedestrian tracking, with 15.32% and 16.91% higher than other methods. Therefore, based on the results, the proposed method has the best performance in terms of precision, recall, and quality.
+
 ### F-1 Score
 | Methods| Haar-like features | HOG | Combination of method |
 | --------------|------------|-------------|---------|
 | F-1 score (%) | 18.71 | 16.06 | 40.82 |
 
-The results obtained indicate that when using a combination of Haar-like features and HOG method, the number of correct detections is increased. Although the proposed method has the most pedestrians correctly detected, the number of false positives or incorrect pedestrian detections is the highest, with a difference of 216. It suggests that the proposed approach detecting irrelevant items. In comparison to Haar-like features and HOG method, the proposed approach has the least number of 94 and 98 undetected pedestrians respectively, out of 179 total pedestrians in the video. Even under most favourable conditions, the proposed method is far from perfect. However, high false positive is not necessarily bad. Some extra false positives or false alarms are better than saving some false negative. In other words, for precaution measures, it is better to get non-pedestrians labelled as pedestrians over leaving pedestrians labelled as non-pedestrians.
+The F1-score for proposed approach is the highest compared to Haar-like and HOG method. It has higher percentage with a difference of 22.11% and 24.76% respectively. This implies that the proposed approach is the one to beat and has sufficiently competitive trade-off between the precision and recall values compared to other methods.
+
+# Future Prospects
+Reducing false positive is important in minimizing the detection of irrelevant objects. The datasets for video format in pedestrian tracking are limited compared to still images. Hence, the establishment of new dataset is needed as a benchmark. The findings of this project can be useful for future works which may want to propose a pedestrian tracking using real-time video with a diverse and high-quality data.
