@@ -19,7 +19,7 @@ def video_to_frames(input_loc, output_loc):
     cap = cv2.VideoCapture(input_loc)
 
     count = 0
-    print("Converting video..\n")
+    print("Converting video...\n")
 
     # Create our body classifier
     body_classifier = cv2.CascadeClassifier(
@@ -40,7 +40,7 @@ def video_to_frames(input_loc, output_loc):
         cap.set(cv2.CAP_PROP_POS_MSEC, (count * 1000))
         ret, frame = cap.read()
 
-        if (frame is None): break  # check for empty frames
+        if (frame is None): break  # Check for empty frames
 
         # Read first frame
         if ret:
